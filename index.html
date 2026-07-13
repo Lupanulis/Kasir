@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -110,9 +111,12 @@
         <div id="page-kasir" class="row g-4">
             <div class="col-lg-7">
                 <div class="d-flex gap-2 mb-3">
-                    <button class="btn btn-outline-primary flex-grow-1" style="background: white;" onclick="startScanner()">📷 Kamera Scan Barcode</button>
-                    <button class="btn btn-success flex-grow-1 shadow-sm" data-bs-toggle="modal" data-bs-target="#addStockModal">➕ Tambah Barang Baru</button>
-                </div>
+    <button class="btn btn-info text-white shadow-sm" style="font-weight: 600;" onclick="loadDataFromSheets()" title="Perbarui Data Stok">
+        🔄 Refresh
+    </button>
+    <button class="btn btn-outline-primary flex-grow-1" style="background: white;" onclick="startScanner()">📷 Kamera Scan Barcode</button>
+    <button class="btn btn-success flex-grow-1 shadow-sm" data-bs-toggle="modal" data-bs-target="#addStockModal">➕ Tambah Barang Baru</button>
+</div>
                 <div id="reader" style="display: none; border-radius: 10px; overflow: hidden; margin-bottom: 15px; border: 1px solid var(--border-color);"></div>
                 
                 <div class="mb-2">
