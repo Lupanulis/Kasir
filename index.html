@@ -1,684 +1,685 @@
-<!DOCTYPE html> -->
-<!-- <html lang="id"> -->
-<!-- <head> -->
-    <!-- <meta charset="UTF-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <!-- <title>AUR PONSEL - Kampa (Terpercaya)</title> -->
-    Bootstrap 5
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    SweetAlert2 untuk Notifikasi Premium
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-    HTML5 QRCode
-    <!-- <script src="https://unpkg.com/html5-qrcode"></script> -->
-    <!-- <style> -->
-        <!-- /* TEMA PROFESIONAL & ELEGAN */ -->
-        <!-- :root { -->
-            <!-- --bg-main: #f4f7f6; -->
-            <!-- --bg-card: #ffffff; -->
-            <!-- --primary-color: #1e3a8a; -->
-            <!-- --primary-hover: #172554; -->
-            <!-- --accent-blue: #3b82f6; -->
-            <!-- --accent-green: #10b981; -->
-            <!-- --accent-orange: #f59e0b; -->
-            <!-- --accent-red: #ef4444; -->
-            <!-- --text-main: #334155; -->
-            <!-- --text-muted: #64748b; -->
-            <!-- --border-color: #e2e8f0; -->
-        <!-- } -->
 
-        <!-- body { background-color: var(--bg-main); color: var(--text-main); font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14px; } -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUR PONSEL - Kampa (Terpercaya)</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert2 untuk Notifikasi Premium -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- HTML5 QRCode -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <style>
+        /* TEMA PROFESIONAL & ELEGAN */
+        :root {
+            --bg-main: #f4f7f6;
+            --bg-card: #ffffff;
+            --primary-color: #1e3a8a;
+            --primary-hover: #172554;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
 
-        <!-- .card, .list-group-item, .modal-content {  -->
-            <!-- background-color: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); border-radius: 10px; -->
-        <!-- } -->
+        body { background-color: var(--bg-main); color: var(--text-main); font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14px; }
+
+        .card, .list-group-item, .modal-content { 
+            background-color: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); border-radius: 10px;
+        }
         
-        <!-- .form-control, .form-select { background-color: #f8fafc; border: 1px solid var(--border-color); color: var(--text-main); border-radius: 6px; } -->
-        <!-- .form-control:focus, .form-select:focus { background-color: #ffffff; box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.15); border-color: var(--accent-blue); } -->
+        .form-control, .form-select { background-color: #f8fafc; border: 1px solid var(--border-color); color: var(--text-main); border-radius: 6px; }
+        .form-control:focus, .form-select:focus { background-color: #ffffff; box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.15); border-color: var(--accent-blue); }
         
-        <!-- .btn-primary { background-color: var(--primary-color); border: none; font-weight: 600; letter-spacing: 0.5px; transition: 0.3s; } -->
-        <!-- .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2); } -->
-        <!-- .btn-success { background-color: var(--accent-green); border: none; font-weight: 600; transition: 0.3s; } -->
-        <!-- .btn-success:hover { background-color: #059669; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2); } -->
+        .btn-primary { background-color: var(--primary-color); border: none; font-weight: 600; letter-spacing: 0.5px; transition: 0.3s; }
+        .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2); }
+        .btn-success { background-color: var(--accent-green); border: none; font-weight: 600; transition: 0.3s; }
+        .btn-success:hover { background-color: #059669; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2); }
         
-        <!-- .badge-baru { background-color: #d1fae5; color: #065f46; border: 1px solid #34d399; } -->
-        <!-- .badge-seken { background-color: #fef3c7; color: #92400e; border: 1px solid #fbbf24; } -->
-        <!-- .badge-aksesoris { background-color: #dbeafe; color: #1e40af; border: 1px solid #60a5fa; } -->
+        .badge-baru { background-color: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+        .badge-seken { background-color: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
+        .badge-aksesoris { background-color: #dbeafe; color: #1e40af; border: 1px solid #60a5fa; }
 
-        <!-- .product-card { cursor: pointer; transition: all 0.2s ease-in-out; position: relative; overflow: hidden; } -->
-        <!-- .product-card:hover { transform: translateY(-4px); border-color: var(--accent-blue); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1); } -->
-        <!-- .stock-badge { position: absolute; top: 10px; right: 10px; font-size: 11px; background: #ffffff; padding: 4px 8px; border-radius: 12px; font-weight: bold; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); } -->
+        .product-card { cursor: pointer; transition: all 0.2s ease-in-out; position: relative; overflow: hidden; }
+        .product-card:hover { transform: translateY(-4px); border-color: var(--accent-blue); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1); }
+        .stock-badge { position: absolute; top: 10px; right: 10px; font-size: 11px; background: #ffffff; padding: 4px 8px; border-radius: 12px; font-weight: bold; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-        <!-- .nav-menu { background: #ffffff; border-bottom: 1px solid var(--border-color); padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.02); } -->
-        <!-- .menu-btn { background: transparent; color: var(--text-muted); border: none; padding: 8px 18px; border-radius: 8px; margin-right: 10px; font-weight: 600; transition: 0.2s; } -->
-        <!-- .menu-btn.active { background: #eff6ff; color: var(--primary-color); } -->
-        <!-- .menu-btn:hover:not(.active) { background: #f8fafc; color: var(--text-main); } -->
+        .nav-menu { background: #ffffff; border-bottom: 1px solid var(--border-color); padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.02); }
+        .menu-btn { background: transparent; color: var(--text-muted); border: none; padding: 8px 18px; border-radius: 8px; margin-right: 10px; font-weight: 600; transition: 0.2s; }
+        .menu-btn.active { background: #eff6ff; color: var(--primary-color); }
+        .menu-btn:hover:not(.active) { background: #f8fafc; color: var(--text-main); }
 
-        <!-- #loginPage { height: 100vh; display: flex; align-items: center; justify-content: center; background: #e2e8f0; } -->
-        <!-- .login-box { background: var(--bg-card); padding: 45px 40px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); width: 100%; max-width: 380px; text-align: center; border-top: 5px solid var(--primary-color); } -->
+        #loginPage { height: 100vh; display: flex; align-items: center; justify-content: center; background: #e2e8f0; }
+        .login-box { background: var(--bg-card); padding: 45px 40px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); width: 100%; max-width: 380px; text-align: center; border-top: 5px solid var(--primary-color); }
 
-        <!-- .table-custom { color: var(--text-main); } -->
-        <!-- .table-custom th { border-bottom: 2px solid var(--border-color); color: var(--text-muted); text-transform: uppercase; font-size: 12px; font-weight: 600; padding: 12px 10px; } -->
-        <!-- .table-custom td { border-bottom: 1px solid var(--border-color); padding: 12px 10px; vertical-align: middle; } -->
+        .table-custom { color: var(--text-main); }
+        .table-custom th { border-bottom: 2px solid var(--border-color); color: var(--text-muted); text-transform: uppercase; font-size: 12px; font-weight: 600; padding: 12px 10px; }
+        .table-custom td { border-bottom: 1px solid var(--border-color); padding: 12px 10px; vertical-align: middle; }
 
-        <!-- .cart-summary-box { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; margin-bottom: 15px; } -->
+        .cart-summary-box { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; margin-bottom: 15px; }
         
-        <!-- .chip-btn { border-radius: 20px; padding: 5px 15px; font-size: 12px; font-weight: bold; cursor: pointer; border: 1px solid var(--border-color); background: white; color: var(--text-muted); transition: 0.2s;} -->
-        <!-- .chip-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color);} -->
+        .chip-btn { border-radius: 20px; padding: 5px 15px; font-size: 12px; font-weight: bold; cursor: pointer; border: 1px solid var(--border-color); background: white; color: var(--text-muted); transition: 0.2s;}
+        .chip-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color);}
 
-        <!-- #loaderOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; } -->
-        <!-- #receiptPage { display: none; background: white; color: black; padding: 20px; font-family: 'Courier New', monospace; width: 80mm; margin: 0 auto; } -->
+        #loaderOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        #receiptPage { display: none; background: white; color: black; padding: 20px; font-family: 'Courier New', monospace; width: 80mm; margin: 0 auto; }
         
-        <!-- @media print { body * { visibility: hidden; } #receiptPage, #receiptPage * { visibility: visible; } #receiptPage { position: absolute; left: 0; top: 0; width: 100%; } } -->
-    <!-- </style> -->
-<!-- </head> -->
-<!-- <body> -->
+        @media print { body * { visibility: hidden; } #receiptPage, #receiptPage * { visibility: visible; } #receiptPage { position: absolute; left: 0; top: 0; width: 100%; } }
+    </style>
+</head>
+<body>
 
-<!-- <div id="loaderOverlay" style="display: none;"> -->
-    <!-- <div class="spinner-border" style="color: var(--primary-color); width: 3rem; height: 3rem;" role="status"></div> -->
-    <!-- <span class="mt-3 fw-bold" style="color: var(--primary-color);" id="loaderText">Memproses...</span> -->
-<!-- </div> -->
+<div id="loaderOverlay" style="display: none;">
+    <div class="spinner-border" style="color: var(--primary-color); width: 3rem; height: 3rem;" role="status"></div>
+    <span class="mt-3 fw-bold" style="color: var(--primary-color);" id="loaderText">Memproses...</span>
+</div>
 
-HALAMAN LOGIN
-<!-- <div id="loginPage"> -->
-    <!-- <div class="login-box"> -->
-        <!-- <h3 style="color: var(--primary-color); font-weight: 800; letter-spacing: 1px; margin-bottom: 5px;">AUR PONSEL</h3> -->
-        <!-- <p class="text-muted mb-4" style="font-size: 13px;">Kampa</p> -->
-        <!-- <select id="userSelect" class="form-select mb-3 text-center fw-bold" style="height: 45px;"><option value="">Memuat data kasir...</option></select> -->
-        <!-- <input type="password" id="pinInput" class="form-control mb-4 text-center fw-bold" placeholder="Masukkan PIN" style="letter-spacing: 8px; height: 45px; font-size: 18px;"> -->
-        <!-- <button class="btn btn-primary w-100" style="height: 45px;" onclick="processLogin()">LOGIN SISTEM</button> -->
-        <!-- <p id="loginError" class="text-danger mt-2 fw-bold" style="display:none; font-size: 12px;">PIN Salah! Silakan coba lagi.</p> -->
-    <!-- </div> -->
-<!-- </div> -->
+<!-- HALAMAN LOGIN -->
+<div id="loginPage">
+    <div class="login-box">
+        <h3 style="color: var(--primary-color); font-weight: 800; letter-spacing: 1px; margin-bottom: 5px;">AUR PONSEL</h3>
+        <p class="text-muted mb-4" style="font-size: 13px;">Kampa</p>
+        <select id="userSelect" class="form-select mb-3 text-center fw-bold" style="height: 45px;"><option value="">Memuat data kasir...</option></select>
+        <input type="password" id="pinInput" class="form-control mb-4 text-center fw-bold" placeholder="Masukkan PIN" style="letter-spacing: 8px; height: 45px; font-size: 18px;">
+        <button class="btn btn-primary w-100" style="height: 45px;" onclick="processLogin()">LOGIN SISTEM</button>
+        <p id="loginError" class="text-danger mt-2 fw-bold" style="display:none; font-size: 12px;">PIN Salah! Silakan coba lagi.</p>
+    </div>
+</div>
 
-APLIKASI UTAMA
-<!-- <div id="mainApp" style="display: none;"> -->
-    <!-- <div class="nav-menu mb-4"> -->
-        <!-- <div> -->
-            <!-- <span class="h5 me-4" style="color: var(--primary-color); font-weight: 800; letter-spacing: 0.5px;">AUR PONSEL</span> -->
-            <!-- <button class="menu-btn active" onclick="switchMenu('kasir')" id="btn-kasir">🛒 Transaksi Kasir</button> -->
-            <!-- <button class="menu-btn" onclick="switchMenu('laporan')" id="btn-laporan">📊 Laporan Penjualan</button> -->
-        <!-- </div> -->
-        <!-- <div class="text-end d-flex align-items-center"> -->
-            <!-- <span style="font-size: 13px; color: var(--text-muted);">Operator: <b id="activeUserLabel" style="color: var(--accent-blue);"></b></span> -->
-            <!-- <button class="btn btn-sm btn-outline-danger ms-3 fw-bold" onclick="logout()">Keluar</button> -->
-        <!-- </div> -->
-    <!-- </div> -->
+<!-- APLIKASI UTAMA -->
+<div id="mainApp" style="display: none;">
+    <div class="nav-menu mb-4">
+        <div>
+            <span class="h5 me-4" style="color: var(--primary-color); font-weight: 800; letter-spacing: 0.5px;">AUR PONSEL</span>
+            <button class="menu-btn active" onclick="switchMenu('kasir')" id="btn-kasir">🛒 Transaksi Kasir</button>
+            <button class="menu-btn" onclick="switchMenu('laporan')" id="btn-laporan">📊 Laporan Penjualan</button>
+        </div>
+        <div class="text-end d-flex align-items-center">
+            <span style="font-size: 13px; color: var(--text-muted);">Operator: <b id="activeUserLabel" style="color: var(--accent-blue);"></b></span>
+            <button class="btn btn-sm btn-outline-danger ms-3 fw-bold" onclick="logout()">Keluar</button>
+        </div>
+    </div>
 
-    <!-- <div class="container-fluid px-4"> -->
-        ================= MENU 1: KASIR =================
-        <!-- <div id="page-kasir" class="row g-4"> -->
-            <!-- <div class="col-lg-7"> -->
-                <!-- <div class="d-flex gap-2 mb-3"> -->
-                    <!-- <button class="btn btn-outline-primary flex-grow-1" style="background: white;" onclick="startScanner()">📷 Kamera Scan Barcode</button> -->
-                    <!-- <button class="btn btn-success flex-grow-1 shadow-sm" data-bs-toggle="modal" data-bs-target="#addStockModal">➕ Tambah Barang Baru</button> -->
-                <!-- </div> -->
-                <!-- <div id="reader" style="display: none; border-radius: 10px; overflow: hidden; margin-bottom: 15px; border: 1px solid var(--border-color);"></div> -->
+    <div class="container-fluid px-4">
+        <!-- ================= MENU 1: KASIR ================= -->
+        <div id="page-kasir" class="row g-4">
+            <div class="col-lg-7">
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-outline-primary flex-grow-1" style="background: white;" onclick="startScanner()">📷 Kamera Scan Barcode</button>
+                    <button class="btn btn-success flex-grow-1 shadow-sm" data-bs-toggle="modal" data-bs-target="#addStockModal">➕ Tambah Barang Baru</button>
+                </div>
+                <div id="reader" style="display: none; border-radius: 10px; overflow: hidden; margin-bottom: 15px; border: 1px solid var(--border-color);"></div>
                 
-                <!-- <div class="mb-2"> -->
-                    <!-- <div class="input-group shadow-sm" style="border-radius: 8px; overflow: hidden;"> -->
-                        <!-- <span class="input-group-text bg-white border-end-0">🔍</span> -->
-                        <!-- <input type="text" id="searchInput" class="form-control border-start-0 fw-bold" placeholder="Cari nama produk atau ketik IMEI/Barcode..." oninput="renderProducts()" style="box-shadow: none; height: 45px; color: var(--primary-color);"> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+                <div class="mb-2">
+                    <div class="input-group shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                        <span class="input-group-text bg-white border-end-0">🔍</span>
+                        <input type="text" id="searchInput" class="form-control border-start-0 fw-bold" placeholder="Cari nama produk atau ketik IMEI/Barcode..." oninput="renderProducts()" style="box-shadow: none; height: 45px; color: var(--primary-color);">
+                    </div>
+                </div>
 
-                CHIPS KATEGORI FILTER
-                <!-- <div class="d-flex gap-2 mb-3 pb-1" style="overflow-x: auto;" id="categoryChips"> -->
-                    <!-- <button class="chip-btn active" onclick="setCategoryFilter('all', this)">Semua Etalase</button> -->
-                    <!-- <button class="chip-btn" onclick="setCategoryFilter('baru', this)">HP Baru</button> -->
-                    <!-- <button class="chip-btn" onclick="setCategoryFilter('seken', this)">HP Seken</button> -->
-                    <!-- <button class="chip-btn" onclick="setCategoryFilter('aksesoris', this)">Aksesoris</button> -->
-                <!-- </div> -->
+                <!-- CHIPS KATEGORI FILTER -->
+                <div class="d-flex gap-2 mb-3 pb-1" style="overflow-x: auto;" id="categoryChips">
+                    <button class="chip-btn active" onclick="setCategoryFilter('all', this)">Semua Etalase</button>
+                    <button class="chip-btn" onclick="setCategoryFilter('baru', this)">HP Baru</button>
+                    <button class="chip-btn" onclick="setCategoryFilter('seken', this)">HP Seken</button>
+                    <button class="chip-btn" onclick="setCategoryFilter('aksesoris', this)">Aksesoris</button>
+                </div>
 
-                <!-- <div class="row g-3" id="productList" style="max-height: 60vh; overflow-y: auto; padding-right: 5px;"></div> -->
-            <!-- </div> -->
+                <div class="row g-3" id="productList" style="max-height: 60vh; overflow-y: auto; padding-right: 5px;"></div>
+            </div>
 
-            KERANJANG PEMBELIAN
-            <!-- <div class="col-lg-5"> -->
-                <!-- <div class="card p-4 h-100 border-0 shadow-sm"> -->
-                    <!-- <div class="d-flex justify-content-between align-items-center mb-3"> -->
-                        <!-- <h6 class="fw-bold m-0" style="color: var(--primary-color); font-size: 16px;">🛒 Rincian Pembelian</h6> -->
-                        <!-- <button class="btn btn-sm btn-outline-danger px-2 py-1" style="font-size: 11px; font-weight: bold;" onclick="clearCart()">🗑️ Kosongkan</button> -->
-                    <!-- </div> -->
+            <!-- KERANJANG PEMBELIAN -->
+            <div class="col-lg-5">
+                <div class="card p-4 h-100 border-0 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold m-0" style="color: var(--primary-color); font-size: 16px;">🛒 Rincian Pembelian</h6>
+                        <button class="btn btn-sm btn-outline-danger px-2 py-1" style="font-size: 11px; font-weight: bold;" onclick="clearCart()">🗑️ Kosongkan</button>
+                    </div>
 
-                    <!-- <ul class="list-group mb-3 flex-grow-1 border-0" id="cartList" style="max-height: 35vh; overflow-y: auto; background: transparent;"></ul> -->
+                    <ul class="list-group mb-3 flex-grow-1 border-0" id="cartList" style="max-height: 35vh; overflow-y: auto; background: transparent;"></ul>
                     
-                    <!-- <div class="cart-summary-box"> -->
-                        <!-- <div class="d-flex justify-content-between align-items-center"> -->
-                            <!-- <span class="fw-bold" style="color: var(--text-muted); font-size: 13px;">Potongan / Diskon (Rp)</span> -->
-                            <!-- <input type="number" id="discountValue" class="form-control form-control-sm w-50 text-end fw-bold" value="0" oninput="updateCart()"> -->
-                        <!-- </div> -->
-                        <!-- <small id="discountWarning" class="text-danger fw-bold d-none" style="font-size: 11px;">⚠️ Diskon melebihi subtotal!</small> -->
-                    <!-- </div> -->
+                    <div class="cart-summary-box">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="color: var(--text-muted); font-size: 13px;">Potongan / Diskon (Rp)</span>
+                            <input type="number" id="discountValue" class="form-control form-control-sm w-50 text-end fw-bold" value="0" oninput="updateCart()">
+                        </div>
+                        <small id="discountWarning" class="text-danger fw-bold d-none" style="font-size: 11px;">⚠️ Diskon melebihi subtotal!</small>
+                    </div>
 
-                    <!-- <div class="d-flex justify-content-between mb-2" style="font-size: 14px; color: var(--text-muted);"> -->
-                        <!-- <span>Subtotal:</span><span class="fw-bold" id="subtotalPrice">Rp 0</span> -->
-                    <!-- </div> -->
-                    <!-- <div class="d-flex justify-content-between mb-3 align-items-center" style="border-top: 2px dashed var(--border-color); padding-top: 15px;"> -->
-                        <!-- <h6 class="fw-bold" style="color: var(--text-main);">TOTAL BAYAR:</h6> -->
-                        <!-- <h3 id="totalPrice" class="fw-bold" style="color: var(--primary-color); margin:0;" data-total="0">Rp 0</h3> -->
-                    <!-- </div> -->
+                    <div class="d-flex justify-content-between mb-2" style="font-size: 14px; color: var(--text-muted);">
+                        <span>Subtotal:</span><span class="fw-bold" id="subtotalPrice">Rp 0</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3 align-items-center" style="border-top: 2px dashed var(--border-color); padding-top: 15px;">
+                        <h6 class="fw-bold" style="color: var(--text-main);">TOTAL BAYAR:</h6>
+                        <h3 id="totalPrice" class="fw-bold" style="color: var(--primary-color); margin:0;" data-total="0">Rp 0</h3>
+                    </div>
 
-                    <!-- <div class="mb-3"> -->
-                        <!-- <label style="font-size: 12px; color: var(--text-muted); font-weight: bold;">UANG DITERIMA (Rp)</label> -->
-                        <!-- <input type="text" class="form-control text-end fw-bold" style="font-size: 18px; height: 50px;" id="cashGivenDisplay" placeholder="0" oninput="formatAndCalculateCash(this)"> -->
-                        <!-- <input type="hidden" id="cashGivenRaw" value="0"> -->
-                    <!-- </div> -->
+                    <div class="mb-3">
+                        <label style="font-size: 12px; color: var(--text-muted); font-weight: bold;">UANG DITERIMA (Rp)</label>
+                        <input type="text" class="form-control text-end fw-bold" style="font-size: 18px; height: 50px;" id="cashGivenDisplay" placeholder="0" oninput="formatAndCalculateCash(this)">
+                        <input type="hidden" id="cashGivenRaw" value="0">
+                    </div>
                     
-                    <!-- <div class="d-flex justify-content-between mb-4 align-items-center p-3 rounded" style="background: #f8fafc; border: 1px solid var(--border-color);"> -->
-                        <!-- <span class="fw-bold" style="color: var(--text-main);">KEMBALIAN:</span> -->
-                        <!-- <h5 id="changeAmount" class="fw-bold mb-0" style="color: var(--text-muted);">Rp 0</h5> -->
-                    <!-- </div> -->
+                    <div class="d-flex justify-content-between mb-4 align-items-center p-3 rounded" style="background: #f8fafc; border: 1px solid var(--border-color);">
+                        <span class="fw-bold" style="color: var(--text-main);">KEMBALIAN:</span>
+                        <h5 id="changeAmount" class="fw-bold mb-0" style="color: var(--text-muted);">Rp 0</h5>
+                    </div>
                     
-                    <!-- <button class="btn btn-primary w-100" style="height: 55px; font-size: 16px; border-radius: 8px;" onclick="processCheckout()">PROSES & CETAK STRUK</button> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
+                    <button class="btn btn-primary w-100" style="height: 55px; font-size: 16px; border-radius: 8px;" onclick="processCheckout()">PROSES & CETAK STRUK</button>
+                </div>
+            </div>
+        </div>
 
-        ================= MENU 2: LAPORAN =================
-        <!-- <div id="page-laporan" style="display: none;"> -->
-            <!-- <div class="card p-4 border-0 shadow-sm"> -->
-                <!-- <div class="row align-items-center mb-4 g-2"> -->
-                    <!-- <div class="col-md-3"><h4 class="fw-bold m-0" style="color: var(--primary-color);">📊 Rekap Penjualan</h4></div> -->
-                    <!-- <div class="col-md-9 text-end d-flex justify-content-md-end justify-content-start gap-2 flex-wrap"> -->
+        <!-- ================= MENU 2: LAPORAN ================= -->
+        <div id="page-laporan" style="display: none;">
+            <div class="card p-4 border-0 shadow-sm">
+                <div class="row align-items-center mb-4 g-2">
+                    <div class="col-md-3"><h4 class="fw-bold m-0" style="color: var(--primary-color);">📊 Rekap Penjualan</h4></div>
+                    <div class="col-md-9 text-end d-flex justify-content-md-end justify-content-start gap-2 flex-wrap">
                         
-                        BARU: PERBAIKAN FILTER RENTANG TANGGAL & JAM
-                        <!-- <div class="input-group w-auto"> -->
-                            <!-- <span class="input-group-text bg-white" style="font-size: 11px; font-weight: bold;">Mulai</span> -->
-                            <!-- <input type="date" id="startDate" class="form-control form-control-sm"> -->
-                            <!-- <input type="time" id="startTime" class="form-control form-control-sm" value="00:00"> -->
-                        <!-- </div> -->
-                        <!-- <div class="input-group w-auto"> -->
-                            <!-- <span class="input-group-text bg-white" style="font-size: 11px; font-weight: bold;">Akhir</span> -->
-                            <!-- <input type="date" id="endDate" class="form-control form-control-sm"> -->
-                            <!-- <input type="time" id="endTime" class="form-control form-control-sm" value="23:59"> -->
-                        <!-- </div> -->
+                        <!-- BARU: PERBAIKAN FILTER RENTANG TANGGAL & JAM -->
+                        <div class="input-group w-auto">
+                            <span class="input-group-text bg-white" style="font-size: 11px; font-weight: bold;">Mulai</span>
+                            <input type="date" id="startDate" class="form-control form-control-sm">
+                            <input type="time" id="startTime" class="form-control form-control-sm" value="00:00">
+                        </div>
+                        <div class="input-group w-auto">
+                            <span class="input-group-text bg-white" style="font-size: 11px; font-weight: bold;">Akhir</span>
+                            <input type="date" id="endDate" class="form-control form-control-sm">
+                            <input type="time" id="endTime" class="form-control form-control-sm" value="23:59">
+                        </div>
                         
-                        <!-- <button class="btn btn-sm btn-primary px-3 fw-bold" onclick="renderReports()">Terapkan Filter</button> -->
-                        <!-- <button class="btn btn-sm btn-success px-3 fw-bold" onclick="exportToCSV()">📥 Export Excel (CSV)</button> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+                        <button class="btn btn-sm btn-primary px-3 fw-bold" onclick="renderReports()">Terapkan Filter</button>
+                        <button class="btn btn-sm btn-success px-3 fw-bold" onclick="exportToCSV()">📥 Export Excel (CSV)</button>
+                    </div>
+                </div>
                 
-                <!-- <div class="row mb-4 g-3"> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #eff6ff; border: 1px solid #bfdbfe;"> -->
-                            <!-- <h6 style="color: var(--text-muted); font-size: 13px;">Total Omset Kotor</h6> -->
-                            <!-- <h3 class="fw-bold" id="reportOmset" style="color: var(--primary-color); margin:0;">Rp 0</h3> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #fffbeb; border: 1px solid #fde68a;"> -->
-                            <!-- <h6 style="color: var(--text-muted); font-size: 13px;">Total Diskon Diberikan</h6> -->
-                            <!-- <h3 class="fw-bold" id="reportDiskon" style="color: var(--accent-orange); margin:0;">Rp 0</h3> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #ecfdf5; border: 1px solid #a7f3d0;"> -->
-                            <!-- <h6 style="color: var(--text-muted); font-size: 13px;">Total Transaksi</h6> -->
-                            <!-- <h3 class="fw-bold" id="reportCount" style="color: var(--accent-green); margin:0;">0 Nota</h3> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+                <div class="row mb-4 g-3">
+                    <div class="col-md-4">
+                        <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #eff6ff; border: 1px solid #bfdbfe;">
+                            <h6 style="color: var(--text-muted); font-size: 13px;">Total Omset Kotor</h6>
+                            <h3 class="fw-bold" id="reportOmset" style="color: var(--primary-color); margin:0;">Rp 0</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #fffbeb; border: 1px solid #fde68a;">
+                            <h6 style="color: var(--text-muted); font-size: 13px;">Total Diskon Diberikan</h6>
+                            <h3 class="fw-bold" id="reportDiskon" style="color: var(--accent-orange); margin:0;">Rp 0</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #ecfdf5; border: 1px solid #a7f3d0;">
+                            <h6 style="color: var(--text-muted); font-size: 13px;">Total Transaksi</h6>
+                            <h3 class="fw-bold" id="reportCount" style="color: var(--accent-green); margin:0;">0 Nota</h3>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- <div class="table-responsive"> -->
-                    <!-- <table class="table table-custom w-100"> -->
-                        <!-- <thead> -->
-                            <!-- <tr> -->
-                                <!-- <th>Waktu Transaksi</th> <!-- Berubah agar memuat Jam --> -->
-                                <!-- <th>ID Transaksi</th> -->
-                                <!-- <th>Kasir</th> -->
-                                <!-- <th>Total Belanja</th> -->
-                                <!-- <th class="text-center">Aksi</th> -->
-                            <!-- </tr> -->
-                        <!-- </thead> -->
-                        <!-- <tbody id="reportTableBody"></tbody> -->
-                    <!-- </table> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
+                <div class="table-responsive">
+                    <table class="table table-custom w-100">
+                        <thead>
+                            <tr>
+                                <th>Waktu Transaksi</th> <!-- Berubah agar memuat Jam -->
+                                <th>ID Transaksi</th>
+                                <th>Kasir</th>
+                                <th>Total Belanja</th>
+                                <th class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-MODAL TAMBAH STOK
-<!-- <div class="modal fade" id="addStockModal" tabindex="-1"> -->
-    <!-- <div class="modal-dialog modal-dialog-centered"> -->
-        <!-- <div class="modal-content border-0 shadow"> -->
-            <!-- <div class="modal-header border-bottom"> -->
-                <!-- <h5 class="modal-title fw-bold" style="color: var(--primary-color);">Tambah Stok Baru</h5> -->
-                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"></button> -->
-            <!-- </div> -->
-            <!-- <div class="modal-body p-4"> -->
-                <!-- <form id="productForm" onsubmit="saveProduct(event)"> -->
-                    <!-- <div class="mb-3"><label class="fw-bold text-muted" style="font-size:12px;">Nama Barang</label><input type="text" id="pName" class="form-control" required></div> -->
-                    <!-- <div class="mb-3"><label class="fw-bold text-muted" style="font-size:12px;">IMEI / Barcode</label><input type="text" id="pBarcode" class="form-control" required></div> -->
-                    <!-- <div class="row"> -->
-                        <!-- <div class="col-6 mb-3"> -->
-                            <!-- <label class="fw-bold text-muted" style="font-size:12px;">Kategori</label> -->
-                            <!-- <select id="pType" class="form-select"><option value="baru">HP Baru</option><option value="seken">HP Seken</option><option value="aksesoris">Aksesoris</option></select> -->
-                        <!-- </div> -->
-                        <!-- <div class="col-6 mb-3"><label class="fw-bold text-muted" style="font-size:12px;">Jumlah Stok</label><input type="number" id="pStock" class="form-control" required min="1" value="1"></div> -->
-                    <!-- </div> -->
-                    <!-- <div class="mb-4"><label class="fw-bold text-muted" style="font-size:12px;">Harga Jual (Rp)</label><input type="number" id="pPrice" class="form-control" required></div> -->
-                    <!-- <button type="submit" class="btn btn-primary w-100 py-2">SIMPAN KE DATABASE</button> -->
-                <!-- </form> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
+<!-- MODAL TAMBAH STOK -->
+<div class="modal fade" id="addStockModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header border-bottom">
+                <h5 class="modal-title fw-bold" style="color: var(--primary-color);">Tambah Stok Baru</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="productForm" onsubmit="saveProduct(event)">
+                    <div class="mb-3"><label class="fw-bold text-muted" style="font-size:12px;">Nama Barang</label><input type="text" id="pName" class="form-control" required></div>
+                    <div class="mb-3"><label class="fw-bold text-muted" style="font-size:12px;">IMEI / Barcode</label><input type="text" id="pBarcode" class="form-control" required></div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="fw-bold text-muted" style="font-size:12px;">Kategori</label>
+                            <select id="pType" class="form-select"><option value="baru">HP Baru</option><option value="seken">HP Seken</option><option value="aksesoris">Aksesoris</option></select>
+                        </div>
+                        <div class="col-6 mb-3"><label class="fw-bold text-muted" style="font-size:12px;">Jumlah Stok</label><input type="number" id="pStock" class="form-control" required min="1" value="1"></div>
+                    </div>
+                    <div class="mb-4"><label class="fw-bold text-muted" style="font-size:12px;">Harga Jual (Rp)</label><input type="number" id="pPrice" class="form-control" required></div>
+                    <button type="submit" class="btn btn-primary w-100 py-2">SIMPAN KE DATABASE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-MODAL DETAIL TRANSAKSI
-<!-- <div class="modal fade" id="detailModal" tabindex="-1"> -->
-    <!-- <div class="modal-dialog modal-dialog-centered modal-sm"> -->
-        <!-- <div class="modal-content border-0 shadow"> -->
-            <!-- <div class="modal-header border-bottom"> -->
-                <!-- <h6 class="modal-title fw-bold" style="color: var(--primary-color);">Detail Struk</h6> -->
-                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"></button> -->
-            <!-- </div> -->
-            <!-- <div class="modal-body p-3" style="font-family: 'Courier New', monospace; font-size: 12px;" id="detailModalContent"></div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
+<!-- MODAL DETAIL TRANSAKSI -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header border-bottom">
+                <h6 class="modal-title fw-bold" style="color: var(--primary-color);">Detail Struk</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-3" style="font-family: 'Courier New', monospace; font-size: 12px;" id="detailModalContent"></div>
+        </div>
+    </div>
+</div>
 
-HALAMAN STRUK (Print)
-<!-- <div id="receiptPage"> -->
-    <!-- <div style="text-align: center; border-bottom: 1px dashed #000; padding-bottom: 15px; margin-bottom: 15px;"> -->
-        <!-- <h2 style="margin:0; font-family: sans-serif; letter-spacing: 1px;">AUR PONSEL</h2> -->
-        <!-- <p style="margin:5px 0 0; font-size: 12px; font-family: sans-serif;">Pusat HP Baru, Laptop & Seken Berkualitas<br>Jl. Pekanbaru - Bangkinang</p> -->
-    <!-- </div> -->
-    <!-- <div style="font-size: 12px; margin-bottom: 15px; display: flex; justify-content: space-between;"> -->
-        <!-- <span id="receiptDate"></span><span id="receiptCashier" style="font-weight: bold;"></span> -->
-    <!-- </div> -->
-    <!-- <table style="width: 100%; font-size: 12px; border-bottom: 1px dashed #000; margin-bottom: 15px; padding-bottom: 5px;" id="receiptItems"></table> -->
-    <!-- <table style="width: 100%; font-size: 12px;"> -->
-        <!-- <tr><td style="padding-bottom:3px;">Subtotal</td><td style="text-align: right; padding-bottom:3px;" id="rSubtotal"></td></tr> -->
-        <!-- <tr><td style="padding-bottom:3px;">Diskon</td><td style="text-align: right; padding-bottom:3px;" id="rDiskon"></td></tr> -->
-        <!-- <tr><td style="font-size:14px; font-weight:bold; padding: 10px 0;">TOTAL</td><td style="text-align: right; font-size:14px; font-weight:bold; padding: 10px 0;" id="rTotal"></td></tr> -->
-        <!-- <tr><td style="padding-top:5px;">Tunai</td><td style="text-align: right; padding-top:5px;" id="rTunai"></td></tr> -->
-        <!-- <tr><td style="padding-top:3px;">Kembali</td><td style="text-align: right; padding-top:3px;" id="rKembali"></td></tr> -->
-    <!-- </table> -->
-    <!-- <div style="text-align: center; margin-top: 25px; font-size: 11px; font-family: sans-serif;"> -->
-        <!-- <p><b>GARANSI HP / LAPTOP:</b><br>Silakan hubungi: 0812-6834-2347</p> -->
-        <!-- <p style="margin-top: 10px; font-style: italic;">Terima Kasih atas kunjungan Anda!</p> -->
-        <!-- <button id="closeReceiptBtn" onclick="closeReceipt()" style="padding: 12px; margin-top: 20px; cursor: pointer; width: 100%; background: #e2e8f0; border: 1px solid #cbd5e1; border-radius: 5px; font-weight: bold;">KEMBALI KE KASIR</button> -->
-    <!-- </div> -->
-<!-- </div> -->
+<!-- HALAMAN STRUK (Print) -->
+<div id="receiptPage">
+    <div style="text-align: center; border-bottom: 1px dashed #000; padding-bottom: 15px; margin-bottom: 15px;">
+        <h2 style="margin:0; font-family: sans-serif; letter-spacing: 1px;">AUR PONSEL</h2>
+        <p style="margin:5px 0 0; font-size: 12px; font-family: sans-serif;">Pusat HP Baru, Laptop & Seken Berkualitas<br>Jl. Pekanbaru - Bangkinang</p>
+    </div>
+    <div style="font-size: 12px; margin-bottom: 15px; display: flex; justify-content: space-between;">
+        <span id="receiptDate"></span><span id="receiptCashier" style="font-weight: bold;"></span>
+    </div>
+    <table style="width: 100%; font-size: 12px; border-bottom: 1px dashed #000; margin-bottom: 15px; padding-bottom: 5px;" id="receiptItems"></table>
+    <table style="width: 100%; font-size: 12px;">
+        <tr><td style="padding-bottom:3px;">Subtotal</td><td style="text-align: right; padding-bottom:3px;" id="rSubtotal"></td></tr>
+        <tr><td style="padding-bottom:3px;">Diskon</td><td style="text-align: right; padding-bottom:3px;" id="rDiskon"></td></tr>
+        <tr><td style="font-size:14px; font-weight:bold; padding: 10px 0;">TOTAL</td><td style="text-align: right; font-size:14px; font-weight:bold; padding: 10px 0;" id="rTotal"></td></tr>
+        <tr><td style="padding-top:5px;">Tunai</td><td style="text-align: right; padding-top:5px;" id="rTunai"></td></tr>
+        <tr><td style="padding-top:3px;">Kembali</td><td style="text-align: right; padding-top:3px;" id="rKembali"></td></tr>
+    </table>
+    <div style="text-align: center; margin-top: 25px; font-size: 11px; font-family: sans-serif;">
+        <p><b>GARANSI HP / LAPTOP:</b><br>Silakan hubungi: 0812-6834-2347</p>
+        <p style="margin-top: 10px; font-style: italic;">Terima Kasih atas kunjungan Anda!</p>
+        <button id="closeReceiptBtn" onclick="closeReceipt()" style="padding: 12px; margin-top: 20px; cursor: pointer; width: 100%; background: #e2e8f0; border: 1px solid #cbd5e1; border-radius: 5px; font-weight: bold;">KEMBALI KE KASIR</button>
+    </div>
+</div>
 
-BOOTSTRAP JS
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script> -->
-    <!-- // MASUKKAN URL GOOGLE SHEETS ANDA DI SINI -->
-    <!-- const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzTTakOuHNB2AIneeJWYgeKJ3sDRw_IZYQBoS9lkWxELk6LF2EObFRy3O85OVTs_W_HNA/exec";  -->
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // MASUKKAN URL GOOGLE SHEETS ANDA DI SINI
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzTTakOuHNB2AIneeJWYgeKJ3sDRw_IZYQBoS9lkWxELk6LF2EObFRy3O85OVTs_W_HNA/exec"; 
 
-    <!-- let currentUser = ""; -->
-    <!-- let users = {};  -->
-    <!-- let products = []; -->
-    <!-- let transactions = []; -->
-    <!-- let cart = []; -->
-    <!-- let currentCategory = 'all';  -->
+    let currentUser = "";
+    let users = {}; 
+    let products = [];
+    let transactions = [];
+    let cart = [];
+    let currentCategory = 'all'; 
 
-    <!-- const formatRupiah = (num) => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(num); -->
+    const formatRupiah = (num) => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(num);
 
-    <!-- function toggleLoader(show, text = "Memproses...") { -->
-        <!-- document.getElementById('loaderText').innerText = text; -->
-        <!-- document.getElementById('loaderOverlay').style.display = show ? 'flex' : 'none'; -->
-    <!-- } -->
+    function toggleLoader(show, text = "Memproses...") {
+        document.getElementById('loaderText').innerText = text;
+        document.getElementById('loaderOverlay').style.display = show ? 'flex' : 'none';
+    }
 
-    <!-- // Default Filter Tanggal & Jam saat Aplikasi Pertama Kali Dibuka -->
-    <!-- const todayStr = new Date().toISOString().split('T')[0]; -->
-    <!-- document.getElementById('startDate').value = todayStr; -->
-    <!-- document.getElementById('endDate').value = todayStr; -->
-    <!-- document.getElementById('startTime').value = "00:00"; -->
-    <!-- document.getElementById('endTime').value = "23:59"; -->
+    // Default Filter Tanggal & Jam saat Aplikasi Pertama Kali Dibuka
+    const todayStr = new Date().toISOString().split('T')[0];
+    document.getElementById('startDate').value = todayStr;
+    document.getElementById('endDate').value = todayStr;
+    document.getElementById('startTime').value = "00:00";
+    document.getElementById('endTime').value = "23:59";
 
-    <!-- window.addEventListener('DOMContentLoaded', async () => { -->
-        <!-- if(WEB_APP_URL === "SALIN_URL_WEB_APP_ANDA_DISINI") { -->
-            <!-- Swal.fire('Peringatan!', 'URL Web App Google Sheets belum diisi!', 'warning'); return; -->
-        <!-- } -->
-        <!-- await loadDataFromSheets(); -->
-    <!-- }); -->
+    window.addEventListener('DOMContentLoaded', async () => {
+        if(WEB_APP_URL === "SALIN_URL_WEB_APP_ANDA_DISINI") {
+            Swal.fire('Peringatan!', 'URL Web App Google Sheets belum diisi!', 'warning'); return;
+        }
+        await loadDataFromSheets();
+    });
 
-    <!-- async function loadDataFromSheets() { -->
-        <!-- toggleLoader(true, "Sinkronisasi Database..."); -->
-        <!-- try { -->
-            <!-- const response = await fetch(WEB_APP_URL); -->
-            <!-- const data = await response.json(); -->
+    async function loadDataFromSheets() {
+        toggleLoader(true, "Sinkronisasi Database...");
+        try {
+            const response = await fetch(WEB_APP_URL);
+            const data = await response.json();
             
-            <!-- if (data.status === 'error') { -->
-                <!-- Swal.fire('Error Server', data.message, 'error'); return; -->
-            <!-- } -->
+            if (data.status === 'error') {
+                Swal.fire('Error Server', data.message, 'error'); return;
+            }
             
-            <!-- const userSelect = document.getElementById('userSelect'); -->
-            <!-- userSelect.innerHTML = '<option value="">-- Pilih Operator --</option>'; -->
-            <!-- data.users.forEach(u => { -->
-                <!-- users[u.username] = u.pin; -->
-                <!-- userSelect.innerHTML += `<option value="${u.username}">${u.name}</option>`; -->
-            <!-- }); -->
+            const userSelect = document.getElementById('userSelect');
+            userSelect.innerHTML = '<option value="">-- Pilih Operator --</option>';
+            data.users.forEach(u => {
+                users[u.username] = u.pin;
+                userSelect.innerHTML += `<option value="${u.username}">${u.name}</option>`;
+            });
 
-            <!-- products = data.products; -->
-            <!-- transactions = data.transactions; -->
-            <!-- renderProducts(); -->
-            <!-- renderReports(); -->
-        <!-- } catch (error) { -->
-            <!-- Swal.fire('Koneksi Gagal', 'Pastikan internet stabil dan URL valid.', 'error'); -->
-        <!-- } finally { -->
-            <!-- toggleLoader(false); -->
-        <!-- } -->
-    <!-- } -->
+            products = data.products;
+            transactions = data.transactions;
+            renderProducts();
+            renderReports();
+        } catch (error) {
+            Swal.fire('Koneksi Gagal', 'Pastikan internet stabil dan URL valid.', 'error');
+        } finally {
+            toggleLoader(false);
+        }
+    }
 
-    <!-- function processLogin() { -->
-        <!-- const selectedUser = document.getElementById('userSelect').value; -->
-        <!-- const pin = document.getElementById('pinInput').value; -->
-        <!-- if (!selectedUser) return Swal.fire('Oops...', 'Pilih kasir dulu!', 'warning'); -->
+    function processLogin() {
+        const selectedUser = document.getElementById('userSelect').value;
+        const pin = document.getElementById('pinInput').value;
+        if (!selectedUser) return Swal.fire('Oops...', 'Pilih kasir dulu!', 'warning');
         
-        <!-- if (users[selectedUser] === pin) { -->
-            <!-- currentUser = selectedUser.replace('_', ' '); -->
-            <!-- document.getElementById('activeUserLabel').innerText = currentUser; -->
-            <!-- document.getElementById('loginPage').style.display = 'none'; -->
-            <!-- document.getElementById('mainApp').style.display = 'block'; -->
-            <!-- Swal.fire({ title: 'Login Berhasil', toast: true, position: 'top-end', icon: 'success', showConfirmButton: false, timer: 1500 }); -->
-        <!-- } else { -->
-            <!-- document.getElementById('loginError').style.display = 'block'; -->
-            <!-- document.getElementById('pinInput').value = ''; -->
-        <!-- } -->
-    <!-- } -->
+        if (users[selectedUser] === pin) {
+            currentUser = selectedUser.replace('_', ' ');
+            document.getElementById('activeUserLabel').innerText = currentUser;
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('mainApp').style.display = 'block';
+            Swal.fire({ title: 'Login Berhasil', toast: true, position: 'top-end', icon: 'success', showConfirmButton: false, timer: 1500 });
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+            document.getElementById('pinInput').value = '';
+        }
+    }
 
-    <!-- function logout() { -->
-        <!-- Swal.fire({ -->
-            <!-- title: 'Yakin ingin keluar?', icon: 'question', showCancelButton: true, confirmButtonText: 'Ya, Keluar' -->
-        <!-- }).then((result) => { -->
-            <!-- if (result.isConfirmed) { -->
-                <!-- currentUser = ""; -->
-                <!-- document.getElementById('pinInput').value = ''; -->
-                <!-- document.getElementById('loginPage').style.display = 'flex'; -->
-                <!-- document.getElementById('mainApp').style.display = 'none'; -->
-            <!-- } -->
-        <!-- }); -->
-    <!-- } -->
+    function logout() {
+        Swal.fire({
+            title: 'Yakin ingin keluar?', icon: 'question', showCancelButton: true, confirmButtonText: 'Ya, Keluar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                currentUser = "";
+                document.getElementById('pinInput').value = '';
+                document.getElementById('loginPage').style.display = 'flex';
+                document.getElementById('mainApp').style.display = 'none';
+            }
+        });
+    }
 
-    <!-- function switchMenu(menu) { -->
-        <!-- document.getElementById('page-kasir').style.display = menu === 'kasir' ? 'flex' : 'none'; -->
-        <!-- document.getElementById('page-laporan').style.display = menu === 'laporan' ? 'block' : 'none'; -->
-        <!-- document.getElementById('btn-kasir').classList.toggle('active', menu === 'kasir'); -->
-        <!-- document.getElementById('btn-laporan').classList.toggle('active', menu === 'laporan'); -->
-    <!-- } -->
+    function switchMenu(menu) {
+        document.getElementById('page-kasir').style.display = menu === 'kasir' ? 'flex' : 'none';
+        document.getElementById('page-laporan').style.display = menu === 'laporan' ? 'block' : 'none';
+        document.getElementById('btn-kasir').classList.toggle('active', menu === 'kasir');
+        document.getElementById('btn-laporan').classList.toggle('active', menu === 'laporan');
+    }
 
-    <!-- function setCategoryFilter(cat, btnElement) { -->
-        <!-- currentCategory = cat; -->
-        <!-- document.querySelectorAll('.chip-btn').forEach(el => el.classList.remove('active')); -->
-        <!-- btnElement.classList.add('active'); -->
-        <!-- renderProducts(); -->
-    <!-- } -->
+    function setCategoryFilter(cat, btnElement) {
+        currentCategory = cat;
+        document.querySelectorAll('.chip-btn').forEach(el => el.classList.remove('active'));
+        btnElement.classList.add('active');
+        renderProducts();
+    }
 
-    <!-- function renderProducts() { -->
-        <!-- const productList = document.getElementById('productList'); -->
-        <!-- const query = document.getElementById('searchInput').value.toLowerCase(); -->
-        <!-- productList.innerHTML = ''; -->
+    function renderProducts() {
+        const productList = document.getElementById('productList');
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        productList.innerHTML = '';
         
-        <!-- let filtered = products.filter(p =>  -->
-            <!-- (p.name.toLowerCase().includes(query) || (p.barcode && p.barcode.toString().toLowerCase().includes(query))) -->
-        <!-- ); -->
+        let filtered = products.filter(p => 
+            (p.name.toLowerCase().includes(query) || (p.barcode && p.barcode.toString().toLowerCase().includes(query)))
+        );
 
-        <!-- if (currentCategory !== 'all') { filtered = filtered.filter(p => p.type === currentCategory); } -->
-        <!-- if (filtered.length === 0) { productList.innerHTML = `<div class="col-12 text-center mt-4"><p class="text-muted fw-bold">Barang tidak ditemukan.</p></div>`; return; } -->
+        if (currentCategory !== 'all') { filtered = filtered.filter(p => p.type === currentCategory); }
+        if (filtered.length === 0) { productList.innerHTML = `<div class="col-12 text-center mt-4"><p class="text-muted fw-bold">Barang tidak ditemukan.</p></div>`; return; }
 
-        <!-- filtered.forEach(p => { -->
-            <!-- let badgeClass = p.type === 'baru' ? 'badge-baru' : (p.type === 'seken' ? 'badge-seken' : 'badge-aksesoris'); -->
-            <!-- let stockColor = p.stock > 0 ? "color: var(--accent-green);" : "color: var(--accent-red);"; -->
-            <!-- productList.innerHTML += ` -->
-                <!-- <div class="col-6 col-md-4"> -->
-                    <!-- <div class="card product-card p-3 h-100" onclick="addToCart(${p.id})"> -->
-                        <!-- <span class="stock-badge" style="${stockColor}">Stok: ${p.stock}</span> -->
-                        <!-- <span class="badge ${badgeClass} mb-2" style="width: fit-content; font-size:10px;">${p.type.toUpperCase()}</span> -->
-                        <!-- <p class="mb-1 fw-bold text-truncate" style="font-size: 14px;">${p.name}</p> -->
-                        <!-- <span class="fw-bold" style="font-size:15px; color: var(--primary-color);">${formatRupiah(p.price)}</span> -->
-                    <!-- </div> -->
-                <!-- </div>`; -->
-        <!-- }); -->
-    <!-- } -->
+        filtered.forEach(p => {
+            let badgeClass = p.type === 'baru' ? 'badge-baru' : (p.type === 'seken' ? 'badge-seken' : 'badge-aksesoris');
+            let stockColor = p.stock > 0 ? "color: var(--accent-green);" : "color: var(--accent-red);";
+            productList.innerHTML += `
+                <div class="col-6 col-md-4">
+                    <div class="card product-card p-3 h-100" onclick="addToCart(${p.id})">
+                        <span class="stock-badge" style="${stockColor}">Stok: ${p.stock}</span>
+                        <span class="badge ${badgeClass} mb-2" style="width: fit-content; font-size:10px;">${p.type.toUpperCase()}</span>
+                        <p class="mb-1 fw-bold text-truncate" style="font-size: 14px;">${p.name}</p>
+                        <span class="fw-bold" style="font-size:15px; color: var(--primary-color);">${formatRupiah(p.price)}</span>
+                    </div>
+                </div>`;
+        });
+    }
 
-    <!-- function addToCart(id) { -->
-        <!-- const product = products.find(p => p.id === id); -->
-        <!-- if(product.stock <= 0) { Swal.fire({ title: 'Stok Habis!', toast: true, position: 'top-end', icon: 'error', showConfirmButton: false, timer: 2000 }); return; } -->
+    function addToCart(id) {
+        const product = products.find(p => p.id === id);
+        if(product.stock <= 0) { Swal.fire({ title: 'Stok Habis!', toast: true, position: 'top-end', icon: 'error', showConfirmButton: false, timer: 2000 }); return; }
 
-        <!-- const cartItem = cart.find(item => item.id === id); -->
-        <!-- if(cartItem) cartItem.qty += 1; -->
-        <!-- else cart.push({ ...product, qty: 1 }); -->
+        const cartItem = cart.find(item => item.id === id);
+        if(cartItem) cartItem.qty += 1;
+        else cart.push({ ...product, qty: 1 });
         
-        <!-- product.stock -= 1; renderProducts(); updateCart(); -->
-    <!-- } -->
+        product.stock -= 1; renderProducts(); updateCart();
+    }
 
-    <!-- function changeQty(index, delta) { -->
-        <!-- const item = cart[index]; -->
-        <!-- const product = products.find(p => p.id === item.id); -->
+    function changeQty(index, delta) {
+        const item = cart[index];
+        const product = products.find(p => p.id === item.id);
         
-        <!-- if (delta === 1) { -->
-            <!-- if (product.stock <= 0) return Swal.fire({ title: 'Stok Habis!', toast: true, position: 'top-end', icon: 'warning', showConfirmButton: false, timer: 1500 }); -->
-            <!-- item.qty += 1; product.stock -= 1; -->
-        <!-- } else if (delta === -1) { -->
-            <!-- item.qty -= 1; product.stock += 1; -->
-            <!-- if (item.qty === 0) cart.splice(index, 1); -->
-        <!-- } -->
-        <!-- renderProducts(); updateCart(); -->
-    <!-- } -->
+        if (delta === 1) {
+            if (product.stock <= 0) return Swal.fire({ title: 'Stok Habis!', toast: true, position: 'top-end', icon: 'warning', showConfirmButton: false, timer: 1500 });
+            item.qty += 1; product.stock -= 1;
+        } else if (delta === -1) {
+            item.qty -= 1; product.stock += 1;
+            if (item.qty === 0) cart.splice(index, 1);
+        }
+        renderProducts(); updateCart();
+    }
 
-    <!-- function clearCart() { -->
-        <!-- if(cart.length === 0) return; -->
-        <!-- Swal.fire({ title: 'Kosongkan keranjang?', icon: 'warning', showCancelButton: true, confirmButtonText: 'Ya, Buang' }).then((res) => { -->
-            <!-- if(res.isConfirmed) { -->
-                <!-- cart.forEach(item => { const p = products.find(p => p.id === item.id); if(p) p.stock += item.qty; }); -->
-                <!-- cart = []; renderProducts(); updateCart(); -->
-            <!-- } -->
-        <!-- }); -->
-    <!-- } -->
+    function clearCart() {
+        if(cart.length === 0) return;
+        Swal.fire({ title: 'Kosongkan keranjang?', icon: 'warning', showCancelButton: true, confirmButtonText: 'Ya, Buang' }).then((res) => {
+            if(res.isConfirmed) {
+                cart.forEach(item => { const p = products.find(p => p.id === item.id); if(p) p.stock += item.qty; });
+                cart = []; renderProducts(); updateCart();
+            }
+        });
+    }
 
-    <!-- function updateCart() { -->
-        <!-- const cartList = document.getElementById('cartList'); -->
-        <!-- cartList.innerHTML = ''; let subtotal = 0; -->
+    function updateCart() {
+        const cartList = document.getElementById('cartList');
+        cartList.innerHTML = ''; let subtotal = 0;
         
-        <!-- cart.forEach((item, index) => { -->
-            <!-- subtotal += item.price * item.qty; -->
-            <!-- cartList.innerHTML += ` -->
-                <!-- <li class="list-group-item p-2 mb-2 border rounded" style="box-shadow: 0 1px 3px rgba(0,0,0,0.02);"> -->
-                    <!-- <div class="d-flex justify-content-between align-items-center mb-1"> -->
-                        <!-- <span class="fw-bold text-truncate" style="font-size:13px; max-width: 60%;">${item.name}</span> -->
-                        <!-- <span class="fw-bold" style="font-size:13px;">${formatRupiah(item.price * item.qty)}</span> -->
-                    <!-- </div> -->
-                    <!-- <div class="d-flex justify-content-between align-items-center"> -->
-                        <!-- <small class="text-muted" style="font-size:11px;">@ ${formatRupiah(item.price)}</small> -->
-                        <!-- <div class="btn-group btn-group-sm" role="group"> -->
-                            <!-- <button type="button" class="btn btn-outline-secondary py-0 px-2" onclick="changeQty(${index}, -1)">-</button> -->
-                            <!-- <span class="btn btn-light py-0 px-2 fw-bold" style="pointer-events: none;">${item.qty}</span> -->
-                            <!-- <button type="button" class="btn btn-outline-secondary py-0 px-2" onclick="changeQty(${index}, 1)">+</button> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </li>`; -->
-        <!-- }); -->
+        cart.forEach((item, index) => {
+            subtotal += item.price * item.qty;
+            cartList.innerHTML += `
+                <li class="list-group-item p-2 mb-2 border rounded" style="box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="fw-bold text-truncate" style="font-size:13px; max-width: 60%;">${item.name}</span>
+                        <span class="fw-bold" style="font-size:13px;">${formatRupiah(item.price * item.qty)}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted" style="font-size:11px;">@ ${formatRupiah(item.price)}</small>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-outline-secondary py-0 px-2" onclick="changeQty(${index}, -1)">-</button>
+                            <span class="btn btn-light py-0 px-2 fw-bold" style="pointer-events: none;">${item.qty}</span>
+                            <button type="button" class="btn btn-outline-secondary py-0 px-2" onclick="changeQty(${index}, 1)">+</button>
+                        </div>
+                    </div>
+                </li>`;
+        });
 
-        <!-- const discountValue = parseFloat(document.getElementById('discountValue').value) || 0; -->
-        <!-- const discountWarning = document.getElementById('discountWarning'); -->
-        <!-- if(discountValue > subtotal && subtotal > 0) { discountWarning.classList.remove('d-none'); }  -->
-        <!-- else { discountWarning.classList.add('d-none'); } -->
+        const discountValue = parseFloat(document.getElementById('discountValue').value) || 0;
+        const discountWarning = document.getElementById('discountWarning');
+        if(discountValue > subtotal && subtotal > 0) { discountWarning.classList.remove('d-none'); } 
+        else { discountWarning.classList.add('d-none'); }
 
-        <!-- let discountAmount = discountValue > subtotal ? subtotal : discountValue; -->
-        <!-- let totalFinal = subtotal - discountAmount; -->
+        let discountAmount = discountValue > subtotal ? subtotal : discountValue;
+        let totalFinal = subtotal - discountAmount;
 
-        <!-- document.getElementById('totalPrice').dataset.subtotal = subtotal; -->
-        <!-- document.getElementById('totalPrice').dataset.discount = discountAmount; -->
-        <!-- document.getElementById('totalPrice').dataset.total = totalFinal; -->
+        document.getElementById('totalPrice').dataset.subtotal = subtotal;
+        document.getElementById('totalPrice').dataset.discount = discountAmount;
+        document.getElementById('totalPrice').dataset.total = totalFinal;
 
-        <!-- document.getElementById('subtotalPrice').innerText = formatRupiah(subtotal); -->
-        <!-- document.getElementById('totalPrice').innerText = formatRupiah(totalFinal); -->
+        document.getElementById('subtotalPrice').innerText = formatRupiah(subtotal);
+        document.getElementById('totalPrice').innerText = formatRupiah(totalFinal);
         
-        <!-- formatAndCalculateCash(document.getElementById('cashGivenDisplay')); -->
-    <!-- } -->
+        formatAndCalculateCash(document.getElementById('cashGivenDisplay'));
+    }
 
-    <!-- function formatAndCalculateCash(inputEl) { -->
-        <!-- let rawValue = inputEl.value.replace(/[^0-9]/g, ''); -->
-        <!-- if (!rawValue) rawValue = "0"; -->
-        <!-- document.getElementById('cashGivenRaw').value = rawValue; -->
+    function formatAndCalculateCash(inputEl) {
+        let rawValue = inputEl.value.replace(/[^0-9]/g, '');
+        if (!rawValue) rawValue = "0";
+        document.getElementById('cashGivenRaw').value = rawValue;
         
-        <!-- if (rawValue !== "0") { inputEl.value = new Intl.NumberFormat('id-ID').format(rawValue); }  -->
-        <!-- else { inputEl.value = ''; } -->
+        if (rawValue !== "0") { inputEl.value = new Intl.NumberFormat('id-ID').format(rawValue); } 
+        else { inputEl.value = ''; }
 
-        <!-- const total = parseFloat(document.getElementById('totalPrice').dataset.total) || 0; -->
-        <!-- const cashGiven = parseFloat(rawValue); -->
-        <!-- const changeEl = document.getElementById('changeAmount'); -->
+        const total = parseFloat(document.getElementById('totalPrice').dataset.total) || 0;
+        const cashGiven = parseFloat(rawValue);
+        const changeEl = document.getElementById('changeAmount');
         
-        <!-- if (cashGiven >= total && total > 0) { -->
-            <!-- changeEl.innerText = formatRupiah(cashGiven - total); changeEl.style.color = "var(--accent-green)"; -->
-        <!-- } else { -->
-            <!-- changeEl.innerText = "Rp 0"; changeEl.style.color = "var(--text-muted)"; -->
-        <!-- } -->
-    <!-- } -->
+        if (cashGiven >= total && total > 0) {
+            changeEl.innerText = formatRupiah(cashGiven - total); changeEl.style.color = "var(--accent-green)";
+        } else {
+            changeEl.innerText = "Rp 0"; changeEl.style.color = "var(--text-muted)";
+        }
+    }
 
-    <!-- async function processCheckout() { -->
-        <!-- const total = parseFloat(document.getElementById('totalPrice').dataset.total) || 0; -->
-        <!-- const subtotal = parseFloat(document.getElementById('totalPrice').dataset.subtotal) || 0; -->
-        <!-- const discount = parseFloat(document.getElementById('totalPrice').dataset.discount) || 0; -->
-        <!-- const cashGiven = parseFloat(document.getElementById('cashGivenRaw').value) || 0; -->
+    async function processCheckout() {
+        const total = parseFloat(document.getElementById('totalPrice').dataset.total) || 0;
+        const subtotal = parseFloat(document.getElementById('totalPrice').dataset.subtotal) || 0;
+        const discount = parseFloat(document.getElementById('totalPrice').dataset.discount) || 0;
+        const cashGiven = parseFloat(document.getElementById('cashGivenRaw').value) || 0;
 
-        <!-- if(cart.length === 0) return Swal.fire('Kosong!', 'Pilih barang dulu', 'warning'); -->
-        <!-- if(cashGiven < total) return Swal.fire('Uang Kurang!', 'Nominal pembayaran tidak mencukupi.', 'error'); -->
+        if(cart.length === 0) return Swal.fire('Kosong!', 'Pilih barang dulu', 'warning');
+        if(cashGiven < total) return Swal.fire('Uang Kurang!', 'Nominal pembayaran tidak mencukupi.', 'error');
 
-        <!-- const now = new Date(); -->
-        <!-- const trxId = 'TRX-' + now.getTime().toString().slice(-6); -->
-        <!-- const newTransaction = { id: trxId, date: now.toISOString(), cashier: currentUser, items: cart.map(item => `${item.name} (${item.qty}) x ${item.price}`), subtotal: subtotal, discount: discount, total: total }; -->
+        const now = new Date();
+        const trxId = 'TRX-' + now.getTime().toString().slice(-6);
+        const newTransaction = { id: trxId, date: now.toISOString(), cashier: currentUser, items: cart.map(item => `${item.name} (${item.qty}) x ${item.price}`), subtotal: subtotal, discount: discount, total: total };
 
-        <!-- toggleLoader(true, "Mencetak Nota..."); -->
-        <!-- try { -->
-            <!-- const response = await fetch(WEB_APP_URL, { method: "POST", body: JSON.stringify({ action: "addTransaction", transaction: newTransaction, products: products }) }); -->
-            <!-- const result = await response.json(); -->
+        toggleLoader(true, "Mencetak Nota...");
+        try {
+            const response = await fetch(WEB_APP_URL, { method: "POST", body: JSON.stringify({ action: "addTransaction", transaction: newTransaction, products: products }) });
+            const result = await response.json();
 
-            <!-- if (result.status === "success") { -->
-                <!-- transactions.push(newTransaction); renderReports(); -->
+            if (result.status === "success") {
+                transactions.push(newTransaction); renderReports();
 
-                <!-- let receiptHtml = ''; -->
-                <!-- cart.forEach(item => { -->
-                    <!-- receiptHtml += `<tr><td colspan="2" style="padding-top: 5px;">${item.name}</td></tr><tr><td style="color: #555;">${item.qty} x ${item.price}</td><td style="text-align:right;">${item.qty * item.price}</td></tr>`; -->
-                <!-- }); -->
-                <!-- document.getElementById('receiptItems').innerHTML = receiptHtml; -->
-                <!-- document.getElementById('receiptDate').innerText = now.toLocaleString('id-ID'); -->
-                <!-- document.getElementById('receiptCashier').innerText = "Kasir: " + currentUser; -->
-                <!-- document.getElementById('rSubtotal').innerText = formatRupiah(subtotal); -->
-                <!-- document.getElementById('rDiskon').innerText = "- " + formatRupiah(discount); -->
-                <!-- document.getElementById('rTotal').innerText = formatRupiah(total); -->
-                <!-- document.getElementById('rTunai').innerText = formatRupiah(cashGiven); -->
-                <!-- document.getElementById('rKembali').innerText = formatRupiah(cashGiven - total); -->
+                let receiptHtml = '';
+                cart.forEach(item => {
+                    receiptHtml += `<tr><td colspan="2" style="padding-top: 5px;">${item.name}</td></tr><tr><td style="color: #555;">${item.qty} x ${item.price}</td><td style="text-align:right;">${item.qty * item.price}</td></tr>`;
+                });
+                document.getElementById('receiptItems').innerHTML = receiptHtml;
+                document.getElementById('receiptDate').innerText = now.toLocaleString('id-ID');
+                document.getElementById('receiptCashier').innerText = "Kasir: " + currentUser;
+                document.getElementById('rSubtotal').innerText = formatRupiah(subtotal);
+                document.getElementById('rDiskon').innerText = "- " + formatRupiah(discount);
+                document.getElementById('rTotal').innerText = formatRupiah(total);
+                document.getElementById('rTunai').innerText = formatRupiah(cashGiven);
+                document.getElementById('rKembali').innerText = formatRupiah(cashGiven - total);
 
-                <!-- document.getElementById('mainApp').style.display = 'none'; -->
-                <!-- document.body.style.backgroundColor = 'white'; -->
-                <!-- document.getElementById('receiptPage').style.display = 'block'; -->
-                <!-- document.getElementById('closeReceiptBtn').style.display = 'none'; -->
+                document.getElementById('mainApp').style.display = 'none';
+                document.body.style.backgroundColor = 'white';
+                document.getElementById('receiptPage').style.display = 'block';
+                document.getElementById('closeReceiptBtn').style.display = 'none';
                 
-                <!-- window.print(); -->
-                <!-- setTimeout(() => { document.getElementById('closeReceiptBtn').style.display = 'block'; }, 1000); -->
-            <!-- } else { Swal.fire('Gagal!', result.message, 'error'); } -->
-        <!-- } catch (error) { Swal.fire('Koneksi Putus', 'Transaksi gagal dicatat.', 'error'); } finally { toggleLoader(false); } -->
-    <!-- } -->
+                window.print();
+                setTimeout(() => { document.getElementById('closeReceiptBtn').style.display = 'block'; }, 1000);
+            } else { Swal.fire('Gagal!', result.message, 'error'); }
+        } catch (error) { Swal.fire('Koneksi Putus', 'Transaksi gagal dicatat.', 'error'); } finally { toggleLoader(false); }
+    }
 
-    <!-- function closeReceipt() { -->
-        <!-- cart = []; document.getElementById('cashGivenDisplay').value = ''; document.getElementById('cashGivenRaw').value = '0'; document.getElementById('discountValue').value = 0; -->
-        <!-- updateCart(); document.getElementById('receiptPage').style.display = 'none'; document.body.style.backgroundColor = 'var(--bg-main)'; document.getElementById('mainApp').style.display = 'block'; -->
-    <!-- } -->
+    function closeReceipt() {
+        cart = []; document.getElementById('cashGivenDisplay').value = ''; document.getElementById('cashGivenRaw').value = '0'; document.getElementById('discountValue').value = 0;
+        updateCart(); document.getElementById('receiptPage').style.display = 'none'; document.body.style.backgroundColor = 'var(--bg-main)'; document.getElementById('mainApp').style.display = 'block';
+    }
 
-    <!-- // UPDATE LOGIKA: LOGIKA FILTER TRANSAKSI HINGGA HITUNGAN JAM & MENIT -->
-    <!-- function renderReports() { -->
-        <!-- const startDateVal = document.getElementById('startDate').value; -->
-        <!-- const startTimeVal = document.getElementById('startTime').value || '00:00'; -->
-        <!-- const endDateVal = document.getElementById('endDate').value; -->
-        <!-- const endTimeVal = document.getElementById('endTime').value || '23:59'; -->
+    // UPDATE LOGIKA: LOGIKA FILTER TRANSAKSI HINGGA HITUNGAN JAM & MENIT
+    function renderReports() {
+        const startDateVal = document.getElementById('startDate').value;
+        const startTimeVal = document.getElementById('startTime').value || '00:00';
+        const endDateVal = document.getElementById('endDate').value;
+        const endTimeVal = document.getElementById('endTime').value || '23:59';
 
-        <!-- if (!startDateVal || !endDateVal) return; -->
+        if (!startDateVal || !endDateVal) return;
 
-        <!-- // Gabungkan tanggal + jam menjadi objek Date lokal yang utuh -->
-        <!-- const startDate = new Date(`${startDateVal}T${startTimeVal}`); -->
-        <!-- const endDate = new Date(`${endDateVal}T${endTimeVal}:59.999`); // sampai detik akhir -->
+        // Gabungkan tanggal + jam menjadi objek Date lokal yang utuh
+        const startDate = new Date(`${startDateVal}T${startTimeVal}`);
+        const endDate = new Date(`${endDateVal}T${endTimeVal}:59.999`); // sampai detik akhir
 
-        <!-- const tbody = document.getElementById('reportTableBody'); tbody.innerHTML = ''; -->
-        <!-- let totalOmset = 0, totalDiskon = 0, txCount = 0; -->
+        const tbody = document.getElementById('reportTableBody'); tbody.innerHTML = '';
+        let totalOmset = 0, totalDiskon = 0, txCount = 0;
 
-        <!-- transactions.forEach((tx, index) => { -->
-            <!-- const txDate = new Date(tx.date); -->
+        transactions.forEach((tx, index) => {
+            const txDate = new Date(tx.date);
             
-            <!-- // Lakukan pengecekan apakah waktu transaksi berada di dalam jangkauan Tanggal & Jam filter -->
-            <!-- if (txDate >= startDate && txDate <= endDate) { -->
-                <!-- totalOmset += tx.total; totalDiskon += tx.discount; txCount++; -->
+            // Lakukan pengecekan apakah waktu transaksi berada di dalam jangkauan Tanggal & Jam filter
+            if (txDate >= startDate && txDate <= endDate) {
+                totalOmset += tx.total; totalDiskon += tx.discount; txCount++;
                 
-                <!-- // Format tanggal dan waktu ke bentuk lokal untuk ditampilkan di kolom ke-1 -->
-                <!-- const localDateStr = txDate.toLocaleDateString('id-ID'); -->
-                <!-- const localTimeStr = txDate.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }); -->
+                // Format tanggal dan waktu ke bentuk lokal untuk ditampilkan di kolom ke-1
+                const localDateStr = txDate.toLocaleDateString('id-ID');
+                const localTimeStr = txDate.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
 
-                <!-- tbody.innerHTML += ` -->
-                    <!-- <tr> -->
-                        <!-- <td style="font-size: 13px;">${localDateStr} - <b>${localTimeStr} WIB</b></td> -->
-                        <!-- <td class="fw-bold" style="color: var(--primary-color);">${tx.id}</td> -->
-                        <!-- <td style="font-size: 13px;">${tx.cashier}</td> -->
-                        <!-- <td class="fw-bold" style="color: var(--accent-green);">${formatRupiah(tx.total)}</td> -->
-                        <!-- <td class="text-center"><button class="btn btn-sm btn-outline-info py-0 px-2" style="font-size:11px;" onclick="showDetail(${index})">Detail</button></td> -->
-                    <!-- </tr>`; -->
-            <!-- } -->
-        <!-- }); -->
-        <!-- document.getElementById('reportOmset').innerText = formatRupiah(totalOmset); -->
-        <!-- document.getElementById('reportDiskon').innerText = formatRupiah(totalDiskon); -->
-        <!-- document.getElementById('reportCount').innerText = txCount + " Nota"; -->
-    <!-- } -->
+                tbody.innerHTML += `
+                    <tr>
+                        <td style="font-size: 13px;">${localDateStr} - <b>${localTimeStr} WIB</b></td>
+                        <td class="fw-bold" style="color: var(--primary-color);">${tx.id}</td>
+                        <td style="font-size: 13px;">${tx.cashier}</td>
+                        <td class="fw-bold" style="color: var(--accent-green);">${formatRupiah(tx.total)}</td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline-info py-0 px-2" style="font-size:11px;" onclick="showDetail(${index})">Detail</button></td>
+                    </tr>`;
+            }
+        });
+        document.getElementById('reportOmset').innerText = formatRupiah(totalOmset);
+        document.getElementById('reportDiskon').innerText = formatRupiah(totalDiskon);
+        document.getElementById('reportCount').innerText = txCount + " Nota";
+    }
 
-    <!-- function showDetail(index) { -->
-        <!-- const tx = transactions[index]; -->
-        <!-- const txDate = new Date(tx.date).toLocaleString('id-ID'); -->
-        <!-- let itemStr = Array.isArray(tx.items) ? tx.items.join('<br>') : tx.items; -->
+    function showDetail(index) {
+        const tx = transactions[index];
+        const txDate = new Date(tx.date).toLocaleString('id-ID');
+        let itemStr = Array.isArray(tx.items) ? tx.items.join('<br>') : tx.items;
         
-        <!-- let html = ` -->
-            <!-- <div class="mb-2 border-bottom pb-2"><b>ID:</b> ${tx.id}<br><b>Waktu:</b> ${txDate}<br><b>Kasir:</b> ${tx.cashier}</div> -->
-            <!-- <div class="mb-2"><b>Barang Terjual:</b><br>${itemStr}</div> -->
-            <!-- <div class="border-top pt-2 text-end"> -->
-                <!-- Subtotal: ${formatRupiah(tx.subtotal)}<br>Diskon: -${formatRupiah(tx.discount)}<br> -->
-                <!-- <b style="font-size: 14px;">TOTAL: ${formatRupiah(tx.total)}</b> -->
-            <!-- </div>`; -->
-        <!-- document.getElementById('detailModalContent').innerHTML = html; -->
-        <!-- new bootstrap.Modal(document.getElementById('detailModal')).show(); -->
-    <!-- } -->
+        let html = `
+            <div class="mb-2 border-bottom pb-2"><b>ID:</b> ${tx.id}<br><b>Waktu:</b> ${txDate}<br><b>Kasir:</b> ${tx.cashier}</div>
+            <div class="mb-2"><b>Barang Terjual:</b><br>${itemStr}</div>
+            <div class="border-top pt-2 text-end">
+                Subtotal: ${formatRupiah(tx.subtotal)}<br>Diskon: -${formatRupiah(tx.discount)}<br>
+                <b style="font-size: 14px;">TOTAL: ${formatRupiah(tx.total)}</b>
+            </div>`;
+        document.getElementById('detailModalContent').innerHTML = html;
+        new bootstrap.Modal(document.getElementById('detailModal')).show();
+    }
 
-    <!-- function exportToCSV() { -->
-        <!-- if(transactions.length === 0) return Swal.fire('Kosong', 'Tidak ada data untuk di-export.', 'warning'); -->
-        <!-- let csvContent = "data:text/csv;charset=utf-8,ID Transaksi,Tanggal & Waktu,Kasir,Subtotal,Diskon,Total,Item\n"; -->
-        <!-- transactions.forEach(tx => { -->
-            <!-- let items = Array.isArray(tx.items) ? tx.items.join(" | ") : tx.items; -->
-            <!-- let row = `${tx.id},${new Date(tx.date).toLocaleString('id-ID')},${tx.cashier},${tx.subtotal},${tx.discount},${tx.total},"${items}"`; -->
-            <!-- csvContent += row + "\n"; -->
-        <!-- }); -->
-        <!-- const encodedUri = encodeURI(csvContent); -->
-        <!-- const link = document.createElement("a"); link.setAttribute("href", encodedUri); link.setAttribute("download", "Laporan_AUR_PONSEL.csv"); -->
-        <!-- document.body.appendChild(link); link.click(); document.body.removeChild(link); -->
-    <!-- } -->
+    function exportToCSV() {
+        if(transactions.length === 0) return Swal.fire('Kosong', 'Tidak ada data untuk di-export.', 'warning');
+        let csvContent = "data:text/csv;charset=utf-8,ID Transaksi,Tanggal & Waktu,Kasir,Subtotal,Diskon,Total,Item\n";
+        transactions.forEach(tx => {
+            let items = Array.isArray(tx.items) ? tx.items.join(" | ") : tx.items;
+            let row = `${tx.id},${new Date(tx.date).toLocaleString('id-ID')},${tx.cashier},${tx.subtotal},${tx.discount},${tx.total},"${items}"`;
+            csvContent += row + "\n";
+        });
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a"); link.setAttribute("href", encodedUri); link.setAttribute("download", "Laporan_AUR_PONSEL.csv");
+        document.body.appendChild(link); link.click(); document.body.removeChild(link);
+    }
 
-    <!-- async function saveProduct(e) { -->
-        <!-- e.preventDefault(); -->
-        <!-- const newProduct = { id: Date.now(), name: document.getElementById('pName').value, barcode: document.getElementById('pBarcode').value, price: parseFloat(document.getElementById('pPrice').value), type: document.getElementById('pType').value, stock: parseInt(document.getElementById('pStock').value) }; -->
-        <!-- toggleLoader(true, "Menyimpan ke Database..."); -->
-        <!-- try { -->
-            <!-- const response = await fetch(WEB_APP_URL, { method: "POST", body: JSON.stringify({ action: "addTransaction", transaction: newTransaction, products: products }) }); // Perbaikan typo pemanggilan action addProduct -->
-            <!-- const result = await response.json(); -->
-            <!-- if (result.status === "success") { -->
-                <!-- products.push(newProduct); renderProducts(); document.getElementById('productForm').reset(); -->
-                <!-- bootstrap.Modal.getInstance(document.getElementById('addStockModal')).hide(); -->
-                <!-- Swal.fire({ title: 'Tersimpan!', icon: 'success', timer: 1500, showConfirmButton: false }); -->
-            <!-- } else { Swal.fire('Gagal!', result.message, 'error'); } -->
-        <!-- } catch (error) { Swal.fire('Error', 'Masalah jaringan.', 'error'); } finally { toggleLoader(false); } -->
-    <!-- } -->
+    async function saveProduct(e) {
+        e.preventDefault();
+        const newProduct = { id: Date.now(), name: document.getElementById('pName').value, barcode: document.getElementById('pBarcode').value, price: parseFloat(document.getElementById('pPrice').value), type: document.getElementById('pType').value, stock: parseInt(document.getElementById('pStock').value) };
+        toggleLoader(true, "Menyimpan ke Database...");
+        try {
+            const response = await fetch(WEB_APP_URL, { method: "POST", body: JSON.stringify({ action: "addTransaction", transaction: newTransaction, products: products }) }); // Perbaikan typo pemanggilan action addProduct
+            const result = await response.json();
+            if (result.status === "success") {
+                products.push(newProduct); renderProducts(); document.getElementById('productForm').reset();
+                bootstrap.Modal.getInstance(document.getElementById('addStockModal')).hide();
+                Swal.fire({ title: 'Tersimpan!', icon: 'success', timer: 1500, showConfirmButton: false });
+            } else { Swal.fire('Gagal!', result.message, 'error'); }
+        } catch (error) { Swal.fire('Error', 'Masalah jaringan.', 'error'); } finally { toggleLoader(false); }
+    }
 
-    <!-- let html5QrcodeScanner = null; -->
-    <!-- function startScanner() { -->
-        <!-- const readerDiv = document.getElementById('reader'); -->
-        <!-- readerDiv.style.display = readerDiv.style.display === 'block' ? 'none' : 'block'; -->
-        <!-- if(!html5QrcodeScanner && readerDiv.style.display === 'block') { -->
-            <!-- html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 }); -->
-            <!-- html5QrcodeScanner.render((decodedText) => { -->
-                <!-- const p = products.find(x => x.barcode === decodedText); -->
-                <!-- if(p) { addToCart(p.id); Swal.fire({title:'Scanned!', toast:true, position:'top-end', icon:'success', timer:1000, showConfirmButton:false}); } -->
-                <!-- else { Swal.fire({title:'Tidak Ditemukan', toast:true, position:'top-end', icon:'error', timer:1500, showConfirmButton:false}); } -->
-            <!-- }, () => {}); -->
-        <!-- } -->
-    <!-- } -->
-<!-- </script> -->
-<!-- </body> -->
-<!-- </html>
+    let html5QrcodeScanner = null;
+    function startScanner() {
+        const readerDiv = document.getElementById('reader');
+        readerDiv.style.display = readerDiv.style.display === 'block' ? 'none' : 'block';
+        if(!html5QrcodeScanner && readerDiv.style.display === 'block') {
+            html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
+            html5QrcodeScanner.render((decodedText) => {
+                const p = products.find(x => x.barcode === decodedText);
+                if(p) { addToCart(p.id); Swal.fire({title:'Scanned!', toast:true, position:'top-end', icon:'success', timer:1000, showConfirmButton:false}); }
+                else { Swal.fire({title:'Tidak Ditemukan', toast:true, position:'top-end', icon:'error', timer:1500, showConfirmButton:false}); }
+            }, () => {});
+        }
+    }
+</script>
+</body>
+</html>
