@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -652,19 +653,40 @@
     }
 
     async function saveProduct(e) {
-        e.preventDefault();
-        const newProduct = { id: Date.now(), name: document.getElementById('pName').value, barcode: document.getElementById('pBarcode').value, price: parseFloat(document.getElementById('pPrice').value), type: document.getElementById('pType').value, stock: parseInt(document.getElementById('pStock').value) };
-        toggleLoader(true, "Menyimpan ke Database...");
-        try {
-            const response = await fetch(WEB_APP_URL, { method: "POST", body: JSON.stringify({ action: "addTransaction", transaction: newTransaction, products: products }) }); // Perbaikan typo pemanggilan action addProduct
-            const result = await response.json();
-            if (result.status === "success") {
-                products.push(newProduct); renderProducts(); document.getElementById('productForm').reset();
-                bootstrap.Modal.getInstance(document.getElementById('addStockModal')).hide();
-                Swal.fire({ title: 'Tersimpan!', icon: 'success', timer: 1500, showConfirmButton: false });
-            } else { Swal.fire('Gagal!', result.message, 'error'); }
-        } catch (error) { Swal.fire('Error', 'Masalah jaringan.', 'error'); } finally { toggleLoader(false); }
+    e.preventDefault();
+    const newProduct = { 
+        id: Date.now(), 
+        name: document.getElementById('pName').value, 
+        barcode: document.getElementById('pBarcode').value, 
+        price: parseFloat(document.getElementById('pPrice').value), 
+        type: document.getElementById('pType').value, 
+        stock: parseInt(document.getElementById('pStock').value) 
+    };
+    
+    toggleLoader(true, "Menyimpan ke Database...");
+    try {
+        // PERBAIKAN: Mengirimkan action yang sesuai (misal: "addProduct") dan mengirim data 'newProduct'
+        const response = await fetch(WEB_APP_URL, { 
+            method: "POST", 
+            body: JSON.stringify({ action: "addProduct", product: newProduct }) 
+        }); 
+        
+        const result = await response.json();
+        if (result.status === "success") {
+            products.push(newProduct); 
+            renderProducts(); 
+            document.getElementById('productForm').reset();
+            bootstrap.Modal.getInstance(document.getElementById('addStockModal')).hide();
+            Swal.fire({ title: 'Tersimpan!', icon: 'success', timer: 1500, showConfirmButton: false });
+        } else { 
+            Swal.fire('Gagal!', result.message, 'error'); 
+        }
+    } catch (error) { 
+        Swal.fire('Error', 'Masalah jaringan atau error sistem.', 'error'); 
+    } finally { 
+        toggleLoader(false); 
     }
+}
 
     let html5QrcodeScanner = null;
     function startScanner() {
